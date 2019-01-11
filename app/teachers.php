@@ -35,11 +35,11 @@ function display_person($indice, $id, $email, $photo, $first_name, $last_name, $
     <div class="card-body text-center">
       <?php $dancefloor_options = get_option('dancefloor_settings'); ?>
 
-        <?php if ( $dancefloor_options['df_display_team_member_name'] == 'nickname'): ?>
-          <h4 class="card-title ttc"><?= esc_html( get_the_author_meta('display_name',$id) ); ?></h4>
-        <?php else: ?>
-          <h4 class="card-title"><?= esc_html( $first_name ); ?> <?= esc_html( $last_name ); ?></h4>
-        <?php endif; ?>
+      <?php if ( $dancefloor_options['df_display_team_member_name'] == 'nickname'): ?>
+        <h4 class="card-title ttc"><?= esc_html( get_the_author_meta('display_name',$id) ); ?></h4>
+      <?php else: ?>
+        <h4 class="card-title"><?= esc_html( $first_name ); ?> <?= esc_html( $last_name ); ?></h4>
+      <?php endif; ?>
 
       <p class="card-text text-muted"><?= esc_html($title); ?></p>
       <?php if (get_user_meta($id,'skills')): ?>
@@ -58,7 +58,13 @@ function display_person($indice, $id, $email, $photo, $first_name, $last_name, $
 
 
     <div class="card-footer text-center">
-      <a class="btn-social btn-google-plus" href="mailto:<?= esc_html($email); ?>"><i class="fa fa-envelope"></i></a>
+      <a href="mailto:<?= esc_html($email); ?>" class="btn-social">
+        <span class="fa-stack fa-1x">
+          <i class="fas fa-circle fa-stack-2x" style="color:#c02b32"></i>
+          <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+      
       <?php if (get_user_meta($id,'facebook',true)): ?>
         <a class="btn-social bg-primary" href="<?= get_user_meta($id,'facebook',true); ?>"><i class="fa fa-facebook"></i></a>
       <?php endif; ?>

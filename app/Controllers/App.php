@@ -38,6 +38,12 @@ class App extends Controller
       return $image[0];
     }
 
+    public static function default_color()
+    {
+      return 'hola';
+    }
+
+
     public static function schedule_pdf_path()
     {
       // return $dancefloor_options['schedule'];

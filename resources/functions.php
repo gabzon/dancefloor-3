@@ -63,6 +63,7 @@ array_map(function ($file) use ($sage_error) {
 'teachers',
 'admin/facebook',
 'admin/course-filters',
+'admin/kirki',
 'api/featured-image',
 'api/rand_query',
 'Models/taxonomy/day',
@@ -155,3 +156,4 @@ add_action( 'pre_get_posts', 'exclude_video_post_formats' );
 //     print_r($template);
 //     echo '</div>';
 // }
+//
