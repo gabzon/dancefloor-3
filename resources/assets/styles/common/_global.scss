@@ -1,0 +1,48 @@
+body {
+  padding-top: 80px;
+}
+
+body .wrap {
+  margin-top: 20px;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  //font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+p,
+a {
+  font-weight: 400;
+}
+
+a {
+  color: #bf2e36;
+}
+
+a:hover {
+  color: #ff4136;
+  text-decoration: none;
+}
+
+iframe,
+object,
+embed {
+  max-width: 100%;
+}

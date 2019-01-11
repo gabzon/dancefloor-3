@@ -1,0 +1,375 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dancefloor\n"
+"POT-Creation-Date: 2018-07-13 12:46+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../node_modules\n"
+"X-Poedit-SearchPathExcluded-1: ../bower_components\n"
+
+#: ../functions.php:17
+msgid "Sage &rsaquo; Error"
+msgstr "Sage &rsaquo; Erreur"
+
+#: ../functions.php:27
+msgid "You must be using PHP 7 or greater."
+msgstr "Vous devez utiliser PHP 7 ou plus"
+
+#: ../functions.php:27
+msgid "Invalid PHP version"
+msgstr "Version de PHP invalide"
+
+#: ../functions.php:34
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "Vous devez utiliser Wordpress 4.7.0 ou plus"
+
+#: ../functions.php:34
+msgid "Invalid WordPress version"
+msgstr "Version de wordpress invalide"
+
+#: ../functions.php:43
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+"Vous devez lancer <code>composer install</code> depuis le répertoire Sage"
+
+#: ../functions.php:44
+msgid "Autoloader not found."
+msgstr "Autoloader pas trouvé"
+
+#: ../functions.php:59
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "Error en localisant <code>%s</code> pour l'inclusion"
+
+#: ../functions.php:115
+msgid "Custom Settings"
+msgstr "Réglages personnalisé"
+
+#: ../functions.php:116
+msgid "Settings"
+msgstr "Réglages"
+
+#: ../functions.php:125
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: ../piklist/parts/meta-boxes/classroom.php:9
+#: ../piklist/parts/terms/classroom.php:9
+msgid "N°, Address"
+msgstr "N°, Adresse"
+
+#: ../piklist/parts/meta-boxes/classroom.php:16
+msgid "Postal Code"
+msgstr "NPA"
+
+#: ../piklist/parts/meta-boxes/classroom.php:23
+#: ../piklist/parts/terms/classroom.php:23
+msgid "City"
+msgstr "Ville"
+
+#: ../piklist/parts/meta-boxes/classroom.php:30
+#: ../piklist/parts/terms/classroom.php:30
+msgid "Neighborhood"
+msgstr "Quartier"
+
+#: ../piklist/parts/meta-boxes/classroom.php:37
+#: ../piklist/parts/terms/classroom.php:37
+msgid "Place"
+msgstr "Lieu"
+
+#: ../piklist/parts/meta-boxes/classroom.php:47
+#: ../piklist/parts/terms/classroom.php:55
+msgid "Google Maps Short Link"
+msgstr "Google Maps Short Link"
+
+#: ../piklist/parts/meta-boxes/classroom.php:49
+#: ../piklist/parts/terms/classroom.php:57
+msgid "Opens google maps on a new tab"
+msgstr "Ouvrir google maps dans un nouveau onglet"
+
+#: ../piklist/parts/meta-boxes/classroom.php:55
+#: ../piklist/parts/terms/classroom.php:63
+msgid "Google Map"
+msgstr "Google Map"
+
+#: ../piklist/parts/meta-boxes/classroom.php:57
+#: ../piklist/parts/terms/classroom.php:65
+msgid "Embed google map on the website"
+msgstr "Embed le google map dans le site internet"
+
+#: ../piklist/parts/meta-boxes/classroom.php:64
+#: ../piklist/parts/terms/classroom.php:72
+msgid "Classroom color"
+msgstr "Couleur de la salle"
+
+#: ../piklist/parts/meta-boxes/classroom.php:73
+msgid "This classroom requires special shoes for the dancefloor"
+msgstr "Veuillez apportez des chausseurs de danse pour cette salle"
+
+#: ../piklist/parts/meta-boxes/classroom.php:82
+#: ../piklist/parts/terms/classroom.php:90
+msgid "Add Photo(s)"
+msgstr "Ajouter photo(s)"
+
+#: ../piklist/parts/meta-boxes/course.php:9
+#: ../piklist/parts/users/profs.php:37
+msgid "Title"
+msgstr "Titre"
+
+#: ../piklist/parts/meta-boxes/course.php:16
+#: ../piklist/parts/meta-boxes/course.php:60
+#: ../views/course/table-details.blade.php:9
+msgid "Level"
+msgstr "Niveau"
+
+#: ../piklist/parts/meta-boxes/course.php:21
+msgid "Beginner"
+msgstr "Débutant"
+
+#: ../piklist/parts/meta-boxes/course.php:22
+msgid "Intermediate"
+msgstr "Intermediaire"
+
+#: ../piklist/parts/meta-boxes/course.php:23
+msgid "Advanced"
+msgstr "Avancé"
+
+#: ../piklist/parts/meta-boxes/course.php:24
+msgid "All levels"
+msgstr "Tous niveaux"
+
+#: ../piklist/parts/meta-boxes/course.php:30
+msgid "Level Number"
+msgstr "N° du niveau"
+
+#: ../piklist/parts/meta-boxes/course.php:69
+msgid "Level text"
+msgstr "Text du niveau"
+
+#: ../piklist/parts/meta-boxes/course.php:72
+msgid "ex: All levels"
+msgstr "ex: Tous niveaux"
+
+#: ../piklist/parts/meta-boxes/course.php:77
+msgid "required Level"
+msgstr "Niveau requis"
+
+#: ../piklist/parts/meta-boxes/course.php:80
+msgid "ex: 4 months"
+msgstr "ex: 4 mois"
+
+#: ../piklist/parts/meta-boxes/course.php:85
+msgid "Start date"
+msgstr "Date début"
+
+#: ../piklist/parts/meta-boxes/course.php:93
+msgid "End date"
+msgstr "Date fin"
+
+#: ../piklist/parts/meta-boxes/course.php:101
+msgid "Session period"
+msgstr "Période de la session"
+
+#: ../piklist/parts/meta-boxes/course.php:126
+msgid "Start Time"
+msgstr "Heure début"
+
+#: ../piklist/parts/meta-boxes/course.php:133
+msgid "End Time"
+msgstr "Heure fin"
+
+#: ../piklist/parts/meta-boxes/course.php:140
+msgid "Start time - Finish time"
+msgstr "Heure début - Heure de fin"
+
+#: ../piklist/parts/meta-boxes/course.php:151
+msgid "Teacher(s)"
+msgstr "Prof(s)"
+
+#: ../piklist/parts/meta-boxes/course.php:162
+msgid "Holidays"
+msgstr "Vacances"
+
+#: ../piklist/parts/meta-boxes/course.php:171
+msgid "Attention Message"
+msgstr "Message d'attention"
+
+#: ../piklist/parts/meta-boxes/course.php:220
+msgid "Full Price"
+msgstr "Prix Adult"
+
+#: ../piklist/parts/meta-boxes/course.php:223
+msgid "ex: 160"
+msgstr "ex: 160"
+
+#: ../piklist/parts/meta-boxes/course.php:228
+msgid "Reduced Price"
+msgstr "Tarif réduite"
+
+#: ../piklist/parts/meta-boxes/course.php:231
+msgid "ex: 140"
+msgstr "ex: 140"
+
+#: ../piklist/parts/meta-boxes/course.php:236
+msgid "Multi Pricing"
+msgstr "Multi prix"
+
+#: ../piklist/parts/meta-boxes/course.php:247
+#: ../views/course/table-details.blade.php:77
+msgid "Price"
+msgstr "Prix"
+
+#: ../piklist/parts/meta-boxes/course.php:253
+msgid "Course Type"
+msgstr "Type de cours"
+
+#: ../piklist/parts/meta-boxes/course.php:258
+msgid "class"
+msgstr "Cours"
+
+#: ../piklist/parts/meta-boxes/course.php:259
+msgid "workshop"
+msgstr "Stage"
+
+#: ../piklist/parts/meta-boxes/course.php:265
+msgid "Gravity Form ID"
+msgstr "ID du Gravity Form"
+
+#: ../piklist/parts/meta-boxes/course.php:268
+msgid "Ex: 23. If left empty it will display the default weekly class form "
+msgstr ""
+"Ex: 23. Lorsque le champs est laissé vide il va afficher la classe semanal "
+"par défaut"
+
+#: ../piklist/parts/settings/design-settings.php:14
+msgid "Display News title"
+msgstr "Affichez le titre \"Actualités\""
+
+#: ../piklist/parts/settings/design-settings.php:24
+msgid "Display a message in the Schedule page"
+msgstr "Afficher un message dans la page Horaire"
+
+#: ../piklist/parts/settings/general-settings.php:13
+msgid "Logo"
+msgstr "Logo"
+
+#: ../piklist/parts/settings/general-settings.php:19
+msgid "Email"
+msgstr "Email"
+
+#: ../piklist/parts/settings/general-settings.php:27
+#: ../piklist/parts/users/profs.php:23
+msgid "Phone number"
+msgstr "Numéro de téléphone"
+
+#: ../piklist/parts/settings/general-settings.php:35
+msgid "Bank Details"
+msgstr "Coordonnées bancaires"
+
+#: ../piklist/parts/settings/general-settings.php:43
+#: ../views/homepage.blade.php:47 ../views/schedule/info-header.blade.php:7
+msgid "Schedule"
+msgstr "Planning"
+
+#: ../piklist/parts/settings/pricing-settings.php:15
+msgid "Currency"
+msgstr "Devise"
+
+#: ../piklist/parts/settings/pricing-settings.php:208
+msgid "Class Price"
+msgstr "Type de tarif"
+
+#: ../piklist/parts/terms/classroom.php:16
+msgid "ZIP Code"
+msgstr "NPA"
+
+#: ../piklist/parts/terms/classroom.php:47
+msgid "Entry code"
+msgstr "Code d'entrée"
+
+#: ../piklist/parts/terms/classroom.php:81
+msgid "This classroom requires special shoes on the dancefloor"
+msgstr "Cette salle exige des chaussures specials"
+
+#: ../piklist/parts/users/profs.php:10 ../piklist/parts/users/profs.php:14
+msgid "Add File(s)"
+msgstr "Ajouter fichier(s)"
+
+#: ../piklist/parts/users/profs.php:11
+msgid "This is the uploader seen in the admin by default."
+msgstr "Cet uploader est vue par l'administrateur par défault"
+
+#: ../piklist/parts/users/profs.php:15
+msgid "Add"
+msgstr "Ajouter"
+
+#: ../piklist/parts/users/profs.php:30
+msgid "facebook"
+msgstr "Facebook"
+
+#: ../piklist/parts/users/profs.php:44
+msgid "Styles & Talents"
+msgstr "Styles et talents"
+
+#: ../piklist/parts/users/profs.php:52
+msgid "Accomplishments"
+msgstr "Réalisations"
+
+#: ../views/course/section-classroom.blade.php:15
+msgid "Open on Google maps"
+msgstr "Ouvrir en google maps"
+
+#: ../views/course/table-details.blade.php:25
+msgid "Day"
+msgstr "Jour"
+
+#: ../views/course/table-details.blade.php:37
+msgid "Time"
+msgstr "Heure"
+
+#: ../views/course/table-details.blade.php:44
+msgid "Period"
+msgstr "Période"
+
+#: ../views/course/table-details.blade.php:56
+msgid "Required level"
+msgstr "Niveau requis"
+
+#: ../views/course/table-details.blade.php:63
+msgid "Teacher"
+msgstr "Prof"
+
+#: ../views/course/table-details.blade.php:68
+msgid "Not available"
+msgstr "Pas disponible"
+
+#: ../views/homepage.blade.php:18
+msgid "News"
+msgstr "Actualités"
+
+#: ../views/schedule.blade.php:20
+msgid "Open enrollment"
+msgstr "Inscriptions ouvertes"
+
+#: ../views/schedule/info-header.blade.php:13
+msgid "Bank info"
+msgstr "Coordonnées bancaires"
+
+#: ../views/teachers.blade.php:17
+msgid "Company Dancers"
+msgstr "Troope de dance"
+
+#~ msgid "Form Title"
+#~ msgstr "Titre du Formulaire"

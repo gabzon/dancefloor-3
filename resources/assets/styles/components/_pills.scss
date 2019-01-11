@@ -1,0 +1,16 @@
+// .nav-pills .nav-link,
+// .nav-pills .banner .nav a,
+// .banner .nav .nav-pills a {
+//
+// }
+
+.banner .nav .nav-pills a.active,
+.show > .nav-pills .nav-link,
+.nav-pills .nav-link.active,
+.show > .nav-pills .banner .nav a,
+.nav-pills .banner .nav a.active,
+.banner .nav .show > .nav-pills a {
+  color: #fff;
+  background-color: #e7040f;
+  border-radius: 0;
+}

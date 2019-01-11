@@ -1,0 +1,19 @@
+#landing-grid {
+  img.img-fluid {
+    //filter: grayscale(80%);
+  }
+
+  img.img-fluid:hover {
+    filter: grayscale(1);
+  }
+
+  .title {
+    text-align: center;
+    width: 100%;
+    color: white;
+    top: calc(50% - 13px);
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

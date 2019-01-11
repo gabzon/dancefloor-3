@@ -1,0 +1,36 @@
+a.simplefavorite-button {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #e7040f;
+  transition: background-color 0.15s ease-in-out;
+  margin-right: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  width: 100% !important;
+}
+
+a.simplefavorite-button.active {
+  background: #e7040f;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.15s ease-in-out;
+  margin-right: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  width: 100% !important;
+}
+
+a.simplefavorite-button:hover {
+  color: white !important;
+  background: #e7040f !important;
+  transition: background-color 0.15s ease-in-out;
+}
+
+a.simplefavorite-button:hover i {
+  color: white !important;
+}

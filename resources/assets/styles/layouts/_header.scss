@@ -1,0 +1,30 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.navbar-nav a {
+  text-transform: uppercase;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.dropdown-menu.show {
+  background: black;
+  min-width: 210px;
+  font-size: 13px;
+
+  a.dropdown-item {
+    color: white;
+  }
+
+  a.dropdown-item:hover {
+    color: black;
+    background-color: #c02b32;
+  }
+}
