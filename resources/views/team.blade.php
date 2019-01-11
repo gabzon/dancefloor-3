@@ -11,7 +11,7 @@ Template Name: Team
         {{-- @include('partials.content-page') --}}
     @endwhile
 
-    @include('partials.team')
+    @include('profile.team')
 
     <br>
     <br>

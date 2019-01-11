@@ -3,7 +3,7 @@
 
     <a href="{{ get_permalink() }}">
       <div class="card grow">
-        <img src="{{ wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) }}" alt="" class="card-img-top" />
+        <img src="{{ get_the_post_thumbnail_url() }}" alt="" class="card-img-top" />
         <div class="card-body">
           <h4 class="card-title">
             <a href="{{ get_permalink() }}">{{ get_the_title() }}</a>
