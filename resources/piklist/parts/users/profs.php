@@ -26,8 +26,29 @@ piklist('field', array(
 
 piklist('field', array(
     'type'      => 'text',
-    'field'     => 'faceboox',
+    'field'     => 'facebook',
     'label'     => __('facebook','sage'),
+    'columns'   => 8
+));
+
+piklist('field', array(
+    'type'      => 'text',
+    'field'     => 'instagram',
+    'label'     => __('Instagram','sage'),
+    'columns'   => 8
+));
+
+piklist('field', array(
+    'type'      => 'text',
+    'field'     => 'google_plus',
+    'label'     => __('Google Plus','sage'),
+    'columns'   => 8
+));
+
+piklist('field', array(
+    'type'      => 'text',
+    'field'     => 'twitter',
+    'label'     => __('Twitter','sage'),
     'columns'   => 8
 ));
 

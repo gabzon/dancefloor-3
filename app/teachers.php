@@ -57,14 +57,15 @@ function display_person($indice, $id, $email, $photo, $first_name, $last_name, $
     </div>
 
 
-    <div class="card-footer text-center">
+    <div class="card-footer ">
       <a href="mailto:<?= esc_html($email); ?>" class="btn-social">
         <span class="fa-stack fa-1x">
           <i class="fas fa-circle fa-stack-2x" style="color:#c02b32"></i>
           <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
         </span>
       </a>
-      
+
+
       <?php if (get_user_meta($id,'facebook',true)): ?>
         <a class="btn-social bg-primary" href="<?= get_user_meta($id,'facebook',true); ?>"><i class="fa fa-facebook"></i></a>
       <?php endif; ?>

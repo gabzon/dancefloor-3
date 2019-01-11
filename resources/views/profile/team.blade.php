@@ -7,11 +7,7 @@ $team_section = $dancefloor_options['team_group'];
   <h1 >{{ $s['team_section_title'] }}</h1>
   @php( $indice = 100 )
   @php( $i = 0 )
-  hola que table
-  <?php
-  $value = Kirki::get_option( 'df_kirki_theme_config', 'df_default_fonts' );
-  echo '<h1>'. $value.'</h1>';
-  ?>
+
   <div class="row">
 
     @foreach ($s['team_member'] as $t)
