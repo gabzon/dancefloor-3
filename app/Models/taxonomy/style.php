@@ -37,6 +37,9 @@ if ( ! function_exists( 'style' ) ) {
       'show_in_nav_menus'          => true,
       'show_tagcloud'              => true,
       'show_in_rest'               => true,
+      'show_in_graphql'            => true,
+      'graphql_single_name'        => 'Style',
+      'graphql_plural_name'        => 'Styles',
     );
     register_taxonomy( 'style', array( 'course','post' ), $args );
 

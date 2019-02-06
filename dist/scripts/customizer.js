@@ -60,25 +60,25 @@
 /******/ 	__webpack_require__.p = "/app/themes/dancefloor-3/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1114);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1121);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 1114:
+/***/ 1121:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1115);
+module.exports = __webpack_require__(1122);
 
 
 /***/ }),
 
-/***/ 1115:
+/***/ 1122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
@@ -89,7 +89,7 @@ wp.customize('blogname', function (value) {
 
 /***/ }),
 
-/***/ 48:
+/***/ 38:
 /***/ (function(module, exports) {
 
 module.exports = jQuery;

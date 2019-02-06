@@ -19,35 +19,35 @@ piklist('field',[
 // Let's create a text box field
 piklist('field', array(
     'type'      => 'text',
-    'field'     => 'phone',
+    'field'     => 'df_phone',
     'label'     => __('Phone number','sage'),
     'columns'   => 4
 ));
 
 piklist('field', array(
     'type'      => 'text',
-    'field'     => 'facebook',
+    'field'     => 'df_facebook',
     'label'     => __('facebook','sage'),
     'columns'   => 8
 ));
 
 piklist('field', array(
     'type'      => 'text',
-    'field'     => 'instagram',
+    'field'     => 'df_instagram',
     'label'     => __('Instagram','sage'),
     'columns'   => 8
 ));
 
 piklist('field', array(
     'type'      => 'text',
-    'field'     => 'google_plus',
+    'field'     => 'df_google_plus',
     'label'     => __('Google Plus','sage'),
     'columns'   => 8
 ));
 
 piklist('field', array(
     'type'      => 'text',
-    'field'     => 'twitter',
+    'field'     => 'df_twitter',
     'label'     => __('Twitter','sage'),
     'columns'   => 8
 ));
@@ -55,7 +55,7 @@ piklist('field', array(
 piklist('field', array(
     'type'      => 'text',
     'field'     => 'title',
-    'label'     => __('Title','sage'),
+    'label'     => __('Job Title','sage'),
     'columns'   => 8
 ));
 

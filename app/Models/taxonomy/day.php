@@ -36,6 +36,9 @@ if ( ! function_exists( 'Day_taxonomy' ) ) {
       'show_in_nav_menus'          => true,
       'show_tagcloud'              => true,
       'show_in_rest'               => true,
+      'show_in_graphql'            => true,
+      'graphql_single_name'        => 'DayOfWeek',
+      'graphql_plural_name'        => 'DaysOfWeek',
     );
     register_taxonomy( 'day_of_week', array( 'course' ), $args );
 

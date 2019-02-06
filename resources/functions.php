@@ -59,20 +59,21 @@ array_map(function ($file) use ($sage_error) {
     $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
   }
 }, ['helpers', 'setup', 'filters', 'admin',
-'walker',
-'teachers',
 'admin/facebook',
 'admin/course-filters',
 'admin/kirki',
+'api/course-api',
 'api/featured-image',
 'api/rand_query',
+'api/graphql',
+'api/classroom-meta',
 'Models/taxonomy/day',
 'Models/taxonomy/level',
 'Models/taxonomy/style',
 'Models/taxonomy/classroom',
 'Models/post-type/course',
-// 'Models/post-type/video',
-'Models/post-type/figure',
+//'Models/post-type/video',
+//'Models/post-type/figure',
 'tgm-required-plugins'
 ]);
 
@@ -148,6 +149,12 @@ function exclude_video_post_formats( $query ) {
 }
 
 add_action( 'pre_get_posts', 'exclude_video_post_formats' );
+
+
+add_action( 'rest_api_init', function () {
+  $controller = new DF_Course_Endpoint();
+  $controller->register_routes();
+} );
 
 // add_action('wp_head', 'show_template');
 // function show_template() {

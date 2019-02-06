@@ -16869,6 +16869,79 @@ a.btn-social,
   margin: 1rem 0;
 }
 
+/* line 1, resources/assets/styles/layouts/_pages.scss */
+
+a {
+  text-decoration: none;
+}
+
+/* line 5, resources/assets/styles/layouts/_pages.scss */
+
+a:hover,
+.active a {
+  color: #f00;
+}
+
+/* line 10, resources/assets/styles/layouts/_pages.scss */
+
+.active a {
+  cursor: default;
+}
+
+/* line 14, resources/assets/styles/layouts/_pages.scss */
+
+.filter-navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* line 19, resources/assets/styles/layouts/_pages.scss */
+
+.filter-navs div {
+  padding: 5px 1%;
+  text-align: center;
+}
+
+/* line 24, resources/assets/styles/layouts/_pages.scss */
+
+.filter-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 30, resources/assets/styles/layouts/_pages.scss */
+
+.box {
+  display: inline-block;
+  width: 29%;
+  margin: 5px 0 5px 2%;
+  padding: 5px;
+  text-align: center;
+  background: #ccc;
+}
+
+/* line 39, resources/assets/styles/layouts/_pages.scss */
+
+.pager {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+/* line 46, resources/assets/styles/layouts/_pages.scss */
+
+.pager li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 20px;
+  text-align: center;
+}
+
 /* line 1, resources/assets/styles/layouts/_tinymce.scss */
 
 body#tinymce {

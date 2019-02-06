@@ -13,6 +13,8 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import videos from './routes/videos';
 import program from './routes/program';
+import react from './routes/react';
+import schedule from './routes/schedule';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -26,6 +28,10 @@ const routes = new Router({
   videos,
   // Program page
   program,
+  // React test of multifilters
+  react,
+  //
+  schedule,
 });
 
 // Load Events

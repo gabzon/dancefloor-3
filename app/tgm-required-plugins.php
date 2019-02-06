@@ -122,6 +122,14 @@ function pf_register_required_plugins() {
       'external_url' => 'https://github.com/wp-graphql/wp-graphql'
     ),
 
+    array(
+      'name'         => 'WP GraphiQL',
+      'slug'         => 'wp-graphiql',
+      'source'       => 'https://github.com/wp-graphql/wp-graphiql/archive/master.zip',
+      'required'     => false,
+      'external_url' => 'https://github.com/wp-graphql/wp-graphiql'
+    ),
+
     // This is an example of the use of 'is_callable' functionality. A user could - for instance -
     // have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
     // 'wordpress-seo-premium'.

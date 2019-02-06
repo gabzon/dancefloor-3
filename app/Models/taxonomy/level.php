@@ -36,6 +36,9 @@ if ( ! function_exists( 'Level_taxonomy' ) ) {
       'show_in_nav_menus'          => true,
       'show_tagcloud'              => true,
       'show_in_rest'               => true,
+      'show_in_graphql'            => true,
+      'graphql_single_name'        => 'Level',
+      'graphql_plural_name'        => 'Levels',
     );
     register_taxonomy( 'level', array( 'course' ), $args );
 

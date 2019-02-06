@@ -36,6 +36,9 @@ if ( ! function_exists( 'Classroom_taxonomy' ) ) {
       'show_in_nav_menus'          => true,
       'show_tagcloud'              => true,
       'show_in_rest'               => true,
+      'show_in_graphql'            => true,
+      'graphql_single_name'        => 'Classroom',
+      'graphql_plural_name'        => 'Classrooms',
     );
     register_taxonomy( 'classroom', array( 'course' ), $args );
 

@@ -49,6 +49,15 @@ Dancefloor 2 is a WordPress theme the dancefloor danceschool. It is based on the
 - Graphic multicolors
 - Ajouter un text quand les stages sont vides (et partout ou il y a une boucle)
 
+## Version 2.5
+* Removed teachers templates
+* Removed teachers.php from app folder
+* Update sage, boostrap and dependencies
+* Improve mobile blog page display
+* Contact page added form BV (list of places)
+* member social icons improved
+* Member profile page added
+
 ## Version 2.4
 * Featured image url added to WP Rest API in "app/api/feature_image"
 * Figures custom post type created
