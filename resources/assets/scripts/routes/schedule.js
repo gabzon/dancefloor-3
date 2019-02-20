@@ -1,142 +1,149 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { shoes } from '../components/shoes';
-import Filters from '../components/Filters';
-import Posts from '../components/Posts';
-import Pager from '../components/Pager';
+import ReactDOM from 'react-dom';
+import StyleFilter from '../components/filters/StyleFilter';
+import LevelFilter from '../components/filters/LevelFilter';
+import LocationFilter from '../components/filters/LocationFilter';
+
+import LessonList from '../components/LessonList';
+import { createFilter } from '../util/Filter';
+import { createSorter } from '../util/Sort';
+import { baseUrl, apiPath } from '../util/config';
+
 
 export default {
   init() {
-
-    const options = {
-      categories: [ 'type', 'color', 'sex'],
-      postsPerPage: 9,
-      activeClass: 'active',
-    };
-
-    class DFSchedule extends React.Component{
-
+    class Schedule extends React.Component {
       constructor(){
         super();
         this.state = {
-          listOfPosts: null,
-          currentPageId: 1,
-          chosen: null,
-          categories: null,
+          data: [],
+          style: 'all',
+          level: 'all',
+          location: 'all',
+          day: 'all',
         }
-        this.pagesSwitcher = this.pagesSwitcher.bind(this);
-        this.filtersSwitcher = this.filtersSwitcher.bind(this);
+        this.handleStyleChange = this.handleStyleChange.bind(this);
+        this.handleLevelChange = this.handleLevelChange.bind(this);
+        this.handleLocationChange = this.handleLocationChange.bind(this);
       }
 
-      componentWillMount() {
-        let chosenPreset = [];
-        for(let i = 0; i < options.categories.length; i++) {
-          chosenPreset.push('all');
-        }
-        this.setState({
-          listOfPosts: shoes,
-          chosen: chosenPreset,
-          categories: options.categories,
-        })
-      }
-
-      componentDidMount() {
-        this.activeLink();
-      }
-
-      componentDidUpdate(prevProps, prevState){
-        if(prevState.currentPageId !== this.state.currentPageId){
-          this.activeLink();
-        }
-      }
-
-      activeLink() {
-        $(`a[data-rel=${this.state.currentPageId}]`).parents('li').addClass(options.activeClass).siblings().removeClass(options.activeClass);
-      }
-
-      pagesSwitcher(e) {
-        e.preventDefault();
-        let newPageId = e.currentTarget.getAttribute('data-rel');
-        this.setState({
-          currentPageId: newPageId,
-        })
-      }
-
-      filtersSwitcher(e) {
-        e.preventDefault();
-        let cat = e.currentTarget.getAttribute('data-category'),
-        filter = e.currentTarget.getAttribute('data-filter'),
-        catPos = this.state.categories.indexOf(cat),
-        chosen = this.state.chosen;
-        chosen.splice(catPos,1,filter);
-        this.setState({
-          chosen: chosen,
-          currentPageId: 1,
-        })
-        $(e.currentTarget).parents('li').addClass(options.activeClass).siblings().removeClass(options.activeClass);
-      }
-
-      render(){
-        let postsPerPage = options.postsPerPage,
-        currentPageId = this.state.currentPageId,
-        catNames = this.state.categories,
-        chosenFilters = this.state.chosen;
-
-        // isolate filters
-        var filtersPack = {};
-        this.state.categories.forEach((category) => {
-          filtersPack[category] = [];
-        });
-        for(var category in filtersPack) {
-          this.state.listOfPosts.forEach((item) => {
-            if(filtersPack[category].indexOf(item[category]) === -1) {
-              filtersPack[category].push(item[category]);
-            }
+      componentDidMount () {
+        let dataURL = baseUrl + apiPath;
+        fetch(dataURL)
+        .then(res => res.json())
+        .then(res => {
+          this.setState({
+            data: this.parseData(res),
           });
-          filtersPack[category].sort((a, b) => {
-            if (a.toLowerCase() < b.toLowerCase()) return -1;
-            if (a.toLowerCase() > b.toLowerCase()) return 1;
-            return 0;
-          });
+        });
+      }
+
+      parseData (data) {
+        let sorters = [
+          {
+            property: 'start_time',
+          },
+          {
+            property: 'location',
+          },
+        ];
+
+        if (data && data.length) {
+
+          if (Array.isArray(sorters) && sorters.length) {
+            data.sort(createSorter(...sorters));
+          }
         }
 
-        // filter posts
-        let filteredPosts = this.state.listOfPosts.filter((item) => {
-          let picker = [];
-          for(let i = 0; i < options.categories.length; i++) {
-            if(item[catNames[i]]) {
-              if(item[catNames[i]] === chosenFilters[i] || chosenFilters[i] === 'all') {
-                picker.push(true);
-              } else {
-                picker.push(false);
-              }
-            }
-          }
-          if(picker.every((n) => {return n === true})) {
-            return item;
-          }
-        });
+        return data;
+      }
 
-        // find posts for current page
-        let pagedPosts = filteredPosts.filter((item, i) => {
-          return i > currentPageId * postsPerPage - postsPerPage -1 && i <= currentPageId * postsPerPage -1;
-        });
+      handleStyleChange(value){
+        this.setState({
+          style: value,
+        })
+      }
 
-        // find total amount of pages
-        let pagesCounter = Math.ceil(filteredPosts.length / postsPerPage),
-        totalPages = [];
-        for(let i = 1; i <= pagesCounter; i++) {totalPages.push(i);}
+      handleLevelChange(value){
+        this.setState({
+          level: value,
+        })
+      }
 
-        return(
-          <div className="app-react">
-            <Filters filtersPack={filtersPack} filtersSwitcher={this.filtersSwitcher} />
-            <Posts posts={pagedPosts} />
-            {pagesCounter > 1 && <Pager totalPages={totalPages} currentPage={currentPageId} pagesSwitcher={this.pagesSwitcher} />}
+      handleLocationChange(value){
+        console.log(value);
+        this.setState({
+          location: value,
+        })
+      }
+      render () {
+        const { data } = this.state;
+
+        return (
+          <div id="react-schedule">
+            <div className="row mb-3">
+              <div className="col-4"><StyleFilter handleStyleChange={this.handleStyleChange } /></div>
+              <div className="col-4"><LevelFilter handleLevelChange={this.handleLevelChange} /></div>
+              <div className="col-4">
+                {baseUrl == 'https://www.buena-vista.me/' ? <LocationFilter handleLocationChange={this.handleLocationChange} /> : ''}
+              </div>
+            </div>
+            <div className="schedule-box">
+              { data ? this.renderData(data) : this.renderLoading() }
+            </div>
           </div>
         )
       }
-    }
 
-    render(<DFSchedule/>, document.getElementById('schedule'))
-  },
-};
+      renderData(data){
+        if (data && data.length) {
+
+          let filters = [
+            {
+              property: 'style',
+              name: this.state.style,
+            },
+            {
+              property: 'level',
+              name: this.state.level,
+            },
+            {
+              property: 'location',
+              name: this.state.location,
+            },
+          ];
+
+
+          // let filteredData = data.filter( lesson => {
+          //   if (this.state.style === 'all') {
+          //     return true;
+          //   }
+          //   console.log(this.state.level);
+          //   return lesson.style.includes(this.state.style)
+          // })
+
+          let filteredData = [];
+          if (Array.isArray(filters) && filters.length) {
+            filteredData = data.filter(createFilter(...filters));
+          }
+
+          // let lessons = filteredData.map((item, i) => {
+          //   return  <Lesson key={i} course={item} />
+          // });
+
+          return <LessonList list={filteredData}/>
+        } else {
+          return <div class="jumbotron">
+              <h4 class="text-center"><i class="fas fa-spinner fa-pulse"></i> Loading lessons...</h4>
+            </div>
+          }
+        }
+
+        renderLoading () {
+          return <div>Loading...</div>
+        }
+      }
+
+      ReactDOM.render(<Schedule />, document.getElementById('schedule'))
+    },
+  };

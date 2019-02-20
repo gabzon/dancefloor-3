@@ -36,6 +36,12 @@ class DF_Course_Endpoint extends WP_REST_Controller {
         'post_type'      => $this->post_type,
         'posts_per_page' => $request['per_page'],
         'page'           => $request['page'],
+        'meta_query' => array(
+          array(
+            'key'     => 'course_type',
+            'value'   => 'class',
+          ),
+        ),
       );
       $courses = get_posts( $args );
       $data = array();
@@ -83,6 +89,14 @@ class DF_Course_Endpoint extends WP_REST_Controller {
     public function prepare_item_for_response( $course, $request ) {
 
       $classroom = wp_get_post_terms( $course->ID, 'classroom', array("fields" => "names"));
+
+      // echo $course->course_end_date;
+      //
+      // $date_array = getdate();
+      //
+      // $today =  $date_array['mday'] . "/" . $date_array['mon'] . "/" . $date_array['year'];
+      //
+      // echo $today . '<br>';
 
       $data = array(
         'id'                => $course->ID,

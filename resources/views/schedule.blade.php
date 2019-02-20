@@ -29,7 +29,8 @@ $schedule_message = $dancefloor_options['df_schedule_message'];
 
   @include('schedule.info-header')
   <br>
-  @include('schedule.classes-per-day')
+  <div id="schedule"></div>
+  {{-- @include('schedule.classes-per-day') --}}
   @while(have_posts()) @php(the_post())
     <br>
     @include('partials.content-page')
