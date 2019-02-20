@@ -90,13 +90,9 @@ class DF_Course_Endpoint extends WP_REST_Controller {
 
       $classroom = wp_get_post_terms( $course->ID, 'classroom', array("fields" => "names"));
 
-      // echo $course->course_end_date;
-      //
-      // $date_array = getdate();
-      //
-      // $today =  $date_array['mday'] . "/" . $date_array['mon'] . "/" . $date_array['year'];
-      //
-      // echo $today . '<br>';
+      $classroom = Course::get_classroom($course->ID);
+      $style = Course::get_style($course->ID);
+      $color = Course::get_color_bar($classroom,$style);
 
       $data = array(
         'id'                => $course->ID,
@@ -114,6 +110,7 @@ class DF_Course_Endpoint extends WP_REST_Controller {
         'full_price'        => $course->course_full_price,
         'reduced_price'     => $course->course_reduced_price,
         'multiprice'        => $course->course_multiprice,
+        'color'             => $color,
 
         'categories'        => wp_get_post_terms( $course->ID, 'category', array("fields" => "names")),
         'tags'              => wp_get_post_terms( $course->ID, 'post_tag', array("fields" => "names")),

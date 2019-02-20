@@ -31,7 +31,7 @@ class StyleFilter extends React.Component {
     })
     return(
       <div>
-        <Select placeholder="Select a level" style={{ width: 200 }} onChange={this.props.handleLevelChange}>
+        <Select placeholder="Select a level" style={{ width: '100%', marginBottom: '5px' }} onChange={this.props.handleLevelChange}>
           <Option value="all">All</Option>
           {levels}
         </Select>

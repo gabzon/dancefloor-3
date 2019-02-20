@@ -1,14 +1,23 @@
 import React from 'react';
-import { Card } from 'antd';
 
 class Lesson extends React.Component {
+
   render(){
+
+    const lessonStyle = {
+      borderLeft: '5px solid',
+      boderColor: this.props.course.color,
+      margin: '0 15px 10px 0',
+      minWidth: '250px',
+      width: '100%',
+    }
+
     return(
-      <a href={this.props.course.link} target="_blank">
-        <Card hoverable size="small" className="grow" style={{ minWidth: 240, margin: '0 10px 10px 0'}} href="https://www.google.com/">
-          <span>{this.props.course.start_time}-{this.props.course.end_time}</span>
-          <h6>{this.props.course.official_title}</h6>
-          <table>
+      <a href={this.props.course.link} className="course black hover-dark-gray">
+        <div className="course-link pl2 grow hover-bg-near-white" style={lessonStyle}>
+          <span className="course-time">{this.props.course.start_time} - {this.props.course.end_time}</span>
+          <br /><strong class="primary-color">{this.props.course.official_title}</strong>
+          <br /><table>
             <tbody>
               <tr>
                 <td className="tc" width="20%"><i className="fas fa-signal"></i></td>
@@ -24,7 +33,7 @@ class Lesson extends React.Component {
               </tr>
             </tbody>
           </table>
-        </Card>
+        </div>
       </a>
     )
   }

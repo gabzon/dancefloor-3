@@ -5,7 +5,7 @@
 @endphp
 
 
-<a href="<?= esc_url(get_permalink($key)); ?>" class="course black hover-dark-gray">  
+<a href="<?= esc_url(get_permalink($key)); ?>" class="course black hover-dark-gray">
   <div class="course-link pl2 grow hover-bg-near-white" style="border-left: 5px solid {{ $color_bar }};">
     <span class="course-time"><?= get_post_meta($key,'course_start_time',true); ?> - <?= get_post_meta($key,'course_end_time',true); ?></span><br>
     <strong class="primary-color"><?= get_post_meta($key, 'course_title',true); ?></strong><br>

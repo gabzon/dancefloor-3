@@ -32,7 +32,7 @@ class StyleFilter extends React.Component {
     })
     return(
       <div>
-        <Select placeholder="Select a style" style={{ width: 200 }} onChange={this.props.handleStyleChange}>
+        <Select placeholder="Select a style" style={{ width: '100%', marginBottom: '5px' }} onChange={this.props.handleStyleChange}>
           <Option value="all">All</Option>
           {styles}
         </Select>
