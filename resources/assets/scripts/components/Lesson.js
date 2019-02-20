@@ -9,18 +9,20 @@ class Lesson extends React.Component {
           <span>{this.props.course.start_time}-{this.props.course.end_time}</span>
           <h6>{this.props.course.official_title}</h6>
           <table>
-            <tr>
-              <td className="tc" width="20%"><i className="fas fa-signal"></i></td>
-              <td>{this.props.course.level}</td>
-            </tr>
-            <tr>
-              <td className="tc"><i className="fas fa-male"></i></td>
-              <td>{this.props.course.teacher}</td>
-            </tr>
-            <tr>
-              <td className="tc"><i className="fas fa-map-marker-alt"></i></td>
-              <td>{this.props.course.location}</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td className="tc" width="20%"><i className="fas fa-signal"></i></td>
+                <td>{this.props.course.level}</td>
+              </tr>
+              <tr>
+                <td className="tc"><i className="fas fa-male"></i></td>
+                <td>{this.props.course.teacher}</td>
+              </tr>
+              <tr>
+                <td className="tc"><i className="fas fa-map-marker-alt"></i></td>
+                <td>{this.props.course.location}</td>
+              </tr>
+            </tbody>
           </table>
         </Card>
       </a>

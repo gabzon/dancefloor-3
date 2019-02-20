@@ -78,14 +78,14 @@ export default {
       }
       render () {
         const { data } = this.state;
-
+        const buenaVista = baseUrl == 'https://www.buena-vista.me/' ? true : false;
         return (
           <div id="react-schedule">
             <div className="row mb-3">
-              <div className="col-4"><StyleFilter handleStyleChange={this.handleStyleChange } /></div>
-              <div className="col-4"><LevelFilter handleLevelChange={this.handleLevelChange} /></div>
-              <div className="col-4">
-                {baseUrl == 'https://www.buena-vista.me/' ? <LocationFilter handleLocationChange={this.handleLocationChange} /> : ''}
+              <div className="col-12 col-sm-12 col-md-4 col-lg-4"><StyleFilter handleStyleChange={this.handleStyleChange } /></div>
+              <div className="col-12 col-sm-12 col-md-4 col-lg-4"><LevelFilter handleLevelChange={this.handleLevelChange} /></div>
+              <div className="col-12 col-sm-12 col-md-4 col-lg-4">
+                { buenaVista ? '' : <LocationFilter handleLocationChange={this.handleLocationChange} />}
               </div>
             </div>
             <div className="schedule-box">
@@ -133,8 +133,8 @@ export default {
 
           return <LessonList list={filteredData}/>
         } else {
-          return <div class="jumbotron">
-              <h4 class="text-center"><i class="fas fa-spinner fa-pulse"></i> Loading lessons...</h4>
+          return <div className="jumbotron">
+              <h4 className="text-center"><i className="fas fa-spinner fa-pulse"></i> Loading schedule...</h4>
             </div>
           }
         }
