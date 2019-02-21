@@ -1,8 +1,10 @@
-//const baseUrl = window.location.href;
-const baseUrl = 'https://www.buena-vista.me/';
+//const hostname = window.location.href;
+const hostname = window.location.hostname;
+
+//const baseUrl = 'https://www.buena-vista.me/';
 //const baseUrl = 'https://www.dancefloorgenevasalsa.ch/';
 //const baseUrl = 'http://localhost/dancefloor/web/';
-
+let baseUrl = 'http://localhost/dancefloor/web/';
 const apiPath = 'wp-json/df-rest-api/course';
 const levelApi = 'wp-json/wp/v2/level';
 const dayApi = 'wp-json/wp/v2/day_of_week';
@@ -10,8 +12,14 @@ const locationApi = 'wp-json/wp/v2/classroom';
 const styleApi = 'wp-json/wp/v2/style';
 let dataURL = '';
 
-if (baseUrl === 'http://localhost:3000/') {
-  dataURL = 'http://localhost/dancefloor/web' + apiPath;
+if (hostname === 'localhost') {
+  dataURL = 'https://www.buena-vista.me/' + apiPath;
+} else if (hostname === 'www.buena-vista.me') {
+  baseUrl = 'https://www.buena-vista.me/';
+  dataURL = 'https://www.buena-vista.me/' + apiPath;
+} else if (hostname === 'www.dancefloorgenevasalsa.ch'){
+  baseUrl = 'https://www.dancefloorgenevasalsa.ch/';
+  dataURL = 'https://www.dancefloorgenevasalsa.ch/' + apiPath;
 } else {
   dataURL = baseUrl + apiPath;
 }

@@ -2,6 +2,7 @@
 /**
 * Course endpoints.
 * Tutorial : https://upnrunn.com/blog/2018/04/how-to-extend-wp-rest-api-from-your-custom-plugin-part-3/
+* https://codex.wordpress.org/Class_Reference/WP_Query#Taxonomy_Parameters
 */
 class DF_Course_Endpoint extends WP_REST_Controller {
   /**
