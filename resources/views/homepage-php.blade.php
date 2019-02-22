@@ -1,5 +1,5 @@
 {{--
-Template Name: Home page React
+Template Name: Home page PHP
 --}}
 @extends('layouts.fullwidth')
 
@@ -45,7 +45,7 @@ Template Name: Home page React
   <div class="container">
     <hr>
     <h1 class="tc pv2"><?= __('Schedule','sage'); ?> <i class="text-muted i f3" lang="en">(Schedule)</i></h1>
-    <div id="schedule"></div>
+    @include('schedule.classes-per-day')
     <br>
   </div>
 @endsection
