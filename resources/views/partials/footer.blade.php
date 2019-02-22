@@ -18,7 +18,7 @@
         @php( $social = App::social())
         @if ( $social['facebook'] )
           <a href="<?= $social['facebook'] ?>" class="btn-social mh0">
-            <span class="fa-stack fa-1x">
+            <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x" style="color:#3b5998"></i>
               <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
             </span>
@@ -27,7 +27,7 @@
 
         @if ( $social['google_plus'] )
           <a href="<?= $social['google_plus'] ?>" class="btn-social">
-            <span class="fa-stack fa-1x">
+            <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x" style="color:#c02b32"></i>
               <i class="fab fa-google-plus fa-stack-1x fa-inverse"></i>
             </span>
@@ -36,7 +36,7 @@
 
         @if ( $social['twitter'] )
           <a href="<?= $social['twitter'] ?>" class="btn-social">
-            <span class="fa-stack fa-1x">
+            <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x" style="color:#55acee"></i>
               <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
             </span>
@@ -45,7 +45,7 @@
 
         @if ( $social['youtube'] )
           <a href="<?= $social['youtube'] ?>" class="btn-social">
-            <span class="fa-stack fa-1x">
+            <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x" style="color:#e52d27"></i>
               <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
             </span>
@@ -53,7 +53,7 @@
         @endif
         @if ( $social['instagram'] )
           <a href="<?= $social['instagram'] ?>" class="btn-social">
-            <span class="fa-stack fa-1x">
+            <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x" style="color:#3f729b"></i>
               <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
             </span>
@@ -61,7 +61,7 @@
         @endif
         @if ( $social['snapchat'] )
           <a href="<?= $social['snapchat'] ?>" class="btn-social">
-            <span class="fa-stack fa-1x">
+            <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x" style="color:#fffc00"></i>
               <i class="fab fa-snapchat fa-stack-1x fa-inverse"></i>
             </span>
@@ -69,7 +69,7 @@
         @endif
         @if ( $social['vimeo'] )
           <a href="<?= $social['vimeo'] ?>" class="btn-social">
-            <span class="fa-stack fa-1x">
+            <span class="fa-stack fa-lg">
               <i class="fas fa-circle fa-stack-2x" style="color:#1ab7ea"></i>
               <i class="fab fa-vimeo fa-stack-1x fa-inverse"></i>
             </span>
