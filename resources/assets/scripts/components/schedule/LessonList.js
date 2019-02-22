@@ -1,6 +1,6 @@
 import React from 'react';
-import daysList from '../util/Days';
-import { baseUrl, dayApi } from '../util/config';
+import daysList from '../../util/Days';
+import { baseUrl, dayApi } from '../../util/config';
 import Lesson from './Lesson';
 
 class LessonList extends React.Component {
@@ -10,6 +10,7 @@ class LessonList extends React.Component {
       daysOfWeek: [],
     }
     this.dayLessons = this.dayLessons.bind(this);
+    this.displayDayName = this.displayDayName.bind(this);
   }
 
   componentWillMount(){
@@ -32,6 +33,17 @@ class LessonList extends React.Component {
     return lessons;
   }
 
+  displayDayName(day){
+    const hostname = window.location.hostname;
+    if (hostname === 'www.buena-vista.me'){
+      return <h1 className="ttc">{day.bhs}</h1>
+    } else if (hostname === 'www.dancefloorgenevasalsa.ch'){
+      return <h1 className="ttc">{day.french}</h1>
+    }else{
+      return <h1 className="ttc">{day.name}</h1>
+    }
+  }
+
 
   render(){
 
@@ -47,7 +59,7 @@ class LessonList extends React.Component {
       {
         orderDays.map(day => {
           return <div key={day.position} className="day-box">
-            { this.dayLessons(day.name) && this.dayLessons(day.name).length ? <h1 className="ttc">{day.name}</h1> : '' }
+            {this.displayDayName(day.name)}
             {this.dayLessons(day.name).map((item, i)=>{
               if (item.type === 'class') {
                 return  <Lesson key={i} course={item} />

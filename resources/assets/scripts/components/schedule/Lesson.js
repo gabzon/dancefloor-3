@@ -8,7 +8,8 @@ class Lesson extends React.Component {
       borderLeft: '5px solid',
       borderColor: this.props.course.color,
       margin: '0 15px 10px 0',
-      minWidth: '250px',
+      minWidth: '200px',
+      maxWidth: '250px',
       width: '100%',
       padding: '5px',
     }
@@ -24,15 +25,15 @@ class Lesson extends React.Component {
             <tbody>
               <tr>
                 <td className="tc" width="20%"><i className="fas fa-signal"></i></td>
-                <td>{this.props.course.level}</td>
+                <td><span className="f6 lh-copy">{this.props.course.level}</span></td>
               </tr>
               <tr>
                 <td className="tc"><i className="fas fa-male"></i></td>
-                <td>{this.props.course.teacher}</td>
+                <td><span className="f6 lh-copy">{this.props.course.teacher}</span></td>
               </tr>
               <tr>
                 <td className="tc"><i className="fas fa-map-marker-alt"></i></td>
-                <td>{this.props.course.location[0].name}</td>
+                <td><span className="f6 lh-copy">{this.props.course.location[0].name}</span></td>
               </tr>
             </tbody>
           </table>

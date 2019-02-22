@@ -1,5 +1,5 @@
 import React from 'react';
-import { baseUrl, locationApi } from '../../util/config';
+import { baseUrl, locationApi } from '../../../util/config';
 import { Select } from 'antd';
 
 const Option = Select.Option;

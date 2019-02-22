@@ -1,5 +1,5 @@
 import React from 'react';
-import { baseUrl, levelApi } from '../../util/config';
+import { baseUrl, styleApi } from '../../../util/config';
 import { Select } from 'antd';
 
 const Option = Select.Option;
@@ -9,31 +9,32 @@ class StyleFilter extends React.Component {
   constructor(){
     super();
     this.state = {
-      listOfLevels: [],
+      listOfStyles: [],
     }
   }
 
   componentWillMount(){
-    let dataURL = baseUrl + levelApi;
+
+    let dataURL = baseUrl + styleApi;
 
     fetch(dataURL)
     .then(res => res.json())
     .then(res => {
       this.setState({
-        listOfLevels: res,
+        listOfStyles: res,
       })
     });
   }
 
   render(){
-    let levels = this.state.listOfLevels.map((level, index) => {
-      return <Option key={index} value={level.name}>{level.name}</Option>
+    let styles = this.state.listOfStyles.map((style, index) => {
+      return <Option key={index} value={style.name}>{style.name}</Option>
     })
     return(
       <div>
-        <Select placeholder="Select a level" style={{ width: '100%', marginBottom: '5px' }} onChange={this.props.handleLevelChange}>
+        <Select placeholder="Select a style" style={{ width: '100%', marginBottom: '5px' }} onChange={this.props.handleStyleChange}>
           <Option value="all">All</Option>
-          {levels}
+          {styles}
         </Select>
       </div>
     )

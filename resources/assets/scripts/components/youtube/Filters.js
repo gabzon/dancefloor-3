@@ -3,6 +3,7 @@ import { Select } from 'antd';
 import { url } from '../../util/config';
 
 const Option = Select.Option;
+const chID = window.location.hostname === 'www.buena-vista.me' ? url.bvChannelID : url.dfChannelID;
 
 class Filters extends React.Component {
 
@@ -16,7 +17,7 @@ class Filters extends React.Component {
   componentDidMount () {
 
     //const finalURL = 'https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCht8-pEFkJv40lNfMmKP0Qw&key=AIzaSyAOYG1Ai4mZy6L-ifZgQ8bzS87vA6v3JdA&maxResults=50';
-    const finalURL = `${url.ytBaseUrl}/playlists?part=snippet&channelId=${url.bvChannelID}&key=AIzaSyAOYG1Ai4mZy6L-ifZgQ8bzS87vA6v3JdA&maxResults=${url.nbResults}`
+    const finalURL = `${url.ytBaseUrl}/playlists?part=snippet&channelId=${chID}&key=AIzaSyAOYG1Ai4mZy6L-ifZgQ8bzS87vA6v3JdA&maxResults=${url.nbResults}`
 
     fetch(finalURL)
     .then(res => res.json())
@@ -34,7 +35,7 @@ class Filters extends React.Component {
 
     return(
       <div className="mb-2" style={{ paddingTop: '20px'}}>
-        <Select onChange={this.props.clicked} defaultValue="all" style={{ width: '100%' }}>
+        <Select onChange={this.props.clicked} placeholder="Select a playlist" style={{ width: '100%' }}>
           <Option value="all">All</Option>
           {playlist}
         </Select>
