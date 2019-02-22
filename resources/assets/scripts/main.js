@@ -11,8 +11,8 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
-//import videos from './routes/videos';
-//import program from './routes/program';
+import videos from './routes/videos';
+import program from './routes/program';
 //import react from './routes/react';
 import schedule from './routes/schedule';
 
@@ -25,12 +25,11 @@ const routes = new Router({
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
   // Videos page
-  //videos,
+  videos,
   // Program page
-  //program,
+  program,
   // React test of multifilters
   //react,
-
   schedule,
 });
 

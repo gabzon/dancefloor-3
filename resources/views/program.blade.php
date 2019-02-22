@@ -25,6 +25,7 @@ Template Name: Program
         </div>
       </div>
     </div>
+    <hr>
     <div id="figure"></div>
     @include('partials.content-page')
   @endwhile

@@ -18,7 +18,7 @@ class Lesson extends React.Component {
         <div className="course-link pl2 grow hover-bg-near-white" style={lessonStyle}>
           <span className="course-time">{this.props.course.start_time} - {this.props.course.end_time}</span>
           <br />
-          <strong className="primary-color">{this.props.course.official_title}</strong>
+          <strong className="primary-color f5">{this.props.course.official_title}</strong>
           <br />
           <table>
             <tbody>

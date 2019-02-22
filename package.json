@@ -85,6 +85,7 @@
     "production": "0.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "tachyons": "^4.11.1"
+    "tachyons": "^4.11.1",
+    "wpapi": "^1.2.1"
   }
 }
