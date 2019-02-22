@@ -5,7 +5,7 @@ import Filters from '../components/youtube/Filters';
 import Playlist from '../components/youtube/Playlist';
 import { url } from '../util/config';
 
-const chID = window.location.hostname === ' www.buena-vista.me' ? url.bvChannelID : url.dfChannelID;
+const chID = window.location.hostname === 'www.buena-vista.me' ? url.bvChannelID : url.dfChannelID;
 
 export default {
   init() {
