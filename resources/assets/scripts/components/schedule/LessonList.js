@@ -59,7 +59,7 @@ class LessonList extends React.Component {
       {
         orderDays.map(day => {
           return <div key={day.position} className="day-box">
-            {this.displayDayName(day.name)}
+            {this.displayDayName(day)}
             {this.dayLessons(day.name).map((item, i)=>{
               if (item.type === 'class') {
                 return  <Lesson key={i} course={item} />
