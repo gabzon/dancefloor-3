@@ -35,13 +35,16 @@ class LessonList extends React.Component {
 
   displayDayName(day){
     const hostname = window.location.hostname;
+
     if (hostname === 'www.buena-vista.me'){
-      return <h1 className="ttc">{day.bhs}</h1>
-    } else if (hostname === 'www.dancefloorgenevasalsa.ch'){
-      return <h1 className="ttc">{day.french}</h1>
-    }else{
-      return <h1 className="ttc">{day.name}</h1>
+      return day.bhs
     }
+
+    if (hostname === 'www.dancefloorgenevasalsa.ch'){
+      return day.french
+    }
+
+    return day.name
   }
 
 
@@ -59,7 +62,7 @@ class LessonList extends React.Component {
       {
         orderDays.map(day => {
           return <div key={day.position} className="day-box">
-            {this.displayDayName(day)}
+            { this.dayLessons(day.name) && this.dayLessons(day.name).length ? <h4 className="ttc">{this.displayDayName(day)}</h4> : '' }
             {this.dayLessons(day.name).map((item, i)=>{
               if (item.type === 'class') {
                 return  <Lesson key={i} course={item} />
@@ -74,8 +77,3 @@ class LessonList extends React.Component {
 }
 
 export default LessonList;
-
-
-// let lessons = filteredData.map((item, i) => {
-//   return  <Lesson key={i} course={item} />
-// });
