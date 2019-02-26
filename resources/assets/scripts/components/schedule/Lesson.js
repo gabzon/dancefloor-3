@@ -9,7 +9,7 @@ class Lesson extends React.Component {
       borderColor: this.props.course.color,
       margin: '0 15px 10px 0',
       minWidth: '200px',
-      maxWidth: '270px',
+      maxWidth: '250px',
       width: '100%',
       padding: '5px',
     }
