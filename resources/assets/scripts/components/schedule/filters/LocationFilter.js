@@ -29,7 +29,7 @@ class LocationFilter extends React.Component {
 
   render(){
     let locations = this.state.listOfLocations.map((location, index) => {
-      return <Option key={index} value={location.name}>{location.classroom_quartier.classroom_quartier} ({location.classroom_quartier.classroom_ville}) | {location.name} {location.slug}</Option>
+      return <Option key={index} value={location.name}>{location.classroom_quartier.classroom_quartier} ({location.classroom_quartier.classroom_ville}) | {location.name}</Option>
     })
     return(
       <div>
