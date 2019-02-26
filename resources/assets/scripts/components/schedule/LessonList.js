@@ -58,11 +58,11 @@ class LessonList extends React.Component {
       return workingDays.includes(day.name)
     })
 
-    return <div className="list-box" style={{display:'flex', flexWrap: 'wrap'}}>
+    return <div className="list-box" style={{display:'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
       {
         orderDays.map(day => {
           return <div key={day.position} className="day-box">
-            { this.dayLessons(day.name) && this.dayLessons(day.name).length ? <h4 className="ttc">{this.displayDayName(day)}</h4> : '' }
+            {this.dayLessons(day.name) && this.dayLessons(day.name).length ? <h4 className="ttc">{this.displayDayName(day)}</h4> : '' }
             {this.dayLessons(day.name).map((item, i)=>{
               if (item.type === 'class') {
                 return  <Lesson key={i} course={item} />

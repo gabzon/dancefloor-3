@@ -33,7 +33,7 @@ class LocationFilter extends React.Component {
     })
     return(
       <div>
-      <Select placeholder="Select a location" style={{ width: 300 }} onChange={this.props.handleLocationChange}>
+      <Select placeholder="Select a location" style={{ width: '100%', marginBottom: '5px' }} onChange={this.props.handleLocationChange}>
         <Option value="all">All</Option>
         {locations}
         </Select>
