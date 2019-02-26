@@ -1,5 +1,5 @@
 const doFilter = (item, filter) => {
-
+  //console.log(item[ filter.property ].includes(filter.name));
   return item[ filter.property ].includes(filter.name) || filter.name === 'all';
 
 }

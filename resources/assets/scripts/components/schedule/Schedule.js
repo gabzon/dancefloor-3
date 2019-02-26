@@ -72,6 +72,7 @@ class Schedule extends React.Component {
       location: value,
     })
   }
+
   render () {
     const { data } = this.state;
     const buenaVista = baseUrl == 'https://www.buena-vista.me/' ? true : false;
@@ -104,10 +105,13 @@ class Schedule extends React.Component {
           name: this.state.level,
         },
         {
-          property: 'location',
+          property: 'classroom',
           name: this.state.location,
         },
       ];
+
+      console.log(this.state.location);
+      console.log(filters);
 
 
       // let filteredData = data.filter( lesson => {
@@ -136,7 +140,7 @@ class Schedule extends React.Component {
   }
 
   renderLoading () {
-    return <div>Loading...</div>
+    return <div>Loading schedule...</div>
   }
 }
 
