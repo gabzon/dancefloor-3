@@ -1,7 +1,6 @@
 import React from 'react';
 import VideoItem from './VideoItem';
 
-
 class Playlist extends React.Component {
   render(){
     const playlist = this.props.list.map(video => {

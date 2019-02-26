@@ -78,7 +78,7 @@ class Youtube extends React.Component{
     });
 
     return(
-      <div className="App">
+      <div className="youtube">
         <div className="row">
           <div className="col-12 col-sm-6 col-md-6 col-lg-6">
             <Player video={this.state.selectedVideo}/>
