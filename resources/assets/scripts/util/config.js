@@ -7,10 +7,10 @@ const hostname = window.location.hostname;
 let baseUrl = 'http://localhost/dancefloor/web/';
 //let baseUrl = 'https://www.buena-vista.me/';
 const apiPath = 'wp-json/df-rest-api/course';
-const levelApi = 'wp-json/wp/v2/level';
-const dayApi = 'wp-json/wp/v2/day_of_week';
-const locationApi = 'wp-json/wp/v2/classroom';
-const styleApi = 'wp-json/wp/v2/style';
+const levelApi = 'wp-json/wp/v2/level?per_page=50';
+const dayApi = 'wp-json/wp/v2/day_of_week?per_page=50';
+const locationApi = 'wp-json/wp/v2/classroom?per_page=50';
+const styleApi = 'wp-json/wp/v2/style?per_page=50';
 let dataURL = '';
 
 if (hostname === 'localhost') {
