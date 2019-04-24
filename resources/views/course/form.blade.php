@@ -35,11 +35,11 @@ gravity_form(50, false, false, false, '', true, 12);
 @if (get_post_meta($post->ID,'course_type', true) == 'class')
   <section id="inscription">
     @php
-    $theme_options = get_option('dancefloor_settings')
-    $page = get_page_by_title( 'formulaire' )
-    $content = apply_filters('the_content', $page->post_content) )
+    $theme_options = get_option('dancefloor_settings');
+    $page = get_page_by_title( 'formulaire' );
+    $content = apply_filters('the_content', $page->post_content);
+    echo $content;
     @endphp
-    {!! $content !!}
     <br>
     <hr>
   </section>
