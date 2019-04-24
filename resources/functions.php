@@ -73,7 +73,7 @@ array_map(function ($file) use ($sage_error) {
 'Models/taxonomy/classroom',
 'Models/post-type/course',
 //'Models/post-type/video',
-//'Models/post-type/figure',
+'Models/post-type/figure',
 'tgm-required-plugins'
 ]);
 
