@@ -42,12 +42,23 @@ Dancefloor 2 is a WordPress theme the dancefloor danceschool. It is based on the
 
 
 ## Meeting
-- inscription buttons
-- Framework (Cadre - Gif - Histoire)
-- graph
-- Franchise
+- Authentification (Facebook/google)
+- Inscription buttons
+- Figures (Cadre - Gif - Histoire)
+- Programme du cours
 - Graphic multicolors
 - Ajouter un text quand les stages sont vides (et partout ou il y a une boucle)
+- Youtube Channel
+- Faire disparaitre cours lorsqu'il y a Plus selon date
+- Liste de presence
+- Improve User profile
+- Documentation
+- Database steps
+- Define skills/talents
+- Franchise
+
+## Version 2.6
+* debug: react schedule {this.props.course.location[0].name} -> {this.props.course.classroom }
 
 ## Version 2.5
 * Removed teachers templates

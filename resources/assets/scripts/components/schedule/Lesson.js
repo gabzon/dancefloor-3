@@ -33,7 +33,11 @@ class Lesson extends React.Component {
               </tr>
               <tr>
                 <td className="tc"><i className="fas fa-map-marker-alt"></i></td>
-                <td><span className="f6 lh-copy">{this.props.course.location[0].name}</span></td>
+                <td>
+                  <span className="f6 lh-copy">
+                    {this.props.course.classroom}
+                  </span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -44,3 +48,6 @@ class Lesson extends React.Component {
 }
 
 export default Lesson;
+
+
+// {this.props.course.location[0].name}

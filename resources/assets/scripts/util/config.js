@@ -2,7 +2,7 @@
 const hostname = window.location.hostname;
 
 //const baseUrl = 'https://www.buena-vista.me/';
-//const baseUrl = 'https://www.dancefloorgenevasalsa.ch/';
+//let baseUrl = 'https://www.dancefloorgenevasalsa.ch/';
 //const baseUrl = 'http://localhost/dancefloor/web/';
 let baseUrl = 'http://localhost/dancefloor/web/';
 //let baseUrl = 'https://www.buena-vista.me/';
