@@ -31,7 +31,6 @@ gravity_form(50, false, false, false, '', true, 12);
 </section> --}}
 
 
-
 @if (get_post_meta($post->ID,'course_type', true) == 'class')
   <section id="inscription">
     @php

@@ -51,10 +51,9 @@ $classroom = Course::get_classroom($post->ID)
     <br>
 
     <hr>
-    @include('course/form')
-    {{-- @if (get_bloginfo('url') == 'https://www.dancefloorgenevasalsa.ch')
-
-    @endif --}}
+    @if (get_bloginfo('url') == 'https://www.dancefloorgenevasalsa.ch')
+      @include('course/form')
+    @endif
   </div>
 
   <footer>
