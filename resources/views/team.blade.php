@@ -28,7 +28,7 @@ $team_section = $dancefloor_options['team_group'];
         <div class="col-12 co-sm-6 col-md-4 col-lg-3">
           <?php $user = get_user_by('login',$t); ?>
           <a href="{{get_author_posts_url( $user->ID )}}">
-            @include('profile.members');
+            @include('profile.members')
           </a>
         </div>
       @endforeach
