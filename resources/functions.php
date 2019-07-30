@@ -74,7 +74,8 @@ array_map(function ($file) use ($sage_error) {
 'Models/post-type/course',
 //'Models/post-type/video',
 'Models/post-type/figure',
-'tgm-required-plugins'
+'tgm-required-plugins',
+'appbase/appbase',
 ]);
 
 

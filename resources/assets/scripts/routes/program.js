@@ -2,18 +2,19 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Program from '../components/program/program';
 //import WPAPI from 'wpapi';
 
 export default {
   init() {
 
-    class Program extends React.Component {
-      constructor() {
-        super();
-        this.state = {
-          posts: [],
-        }
-      }
+    class ProgramApp extends React.Component {
+      // constructor() {
+      //   super();
+      //   this.state = {
+      //     posts: [],
+      //   };
+      // }
 
       componentDidMount(){
         //var wp = new WPAPI({ endpoint: '' });
@@ -34,14 +35,16 @@ export default {
       }
 
       render() {
-        console.log(this.state.posts)
+        //console.log(this.state.posts)
         return (
-          <div>Hola from program react</div>
+          <div>
+            <Program />
+          </div>
         )
       }
     }
 
-    ReactDOM.render(<Program />, document.getElementById('figure') );
+    ReactDOM.render(<ProgramApp />, document.getElementById('figure') );
     //http://localhost/dancefloor/web/wp-json/wp/v2/figure?_embed
   },
   finalize() {

@@ -130,4 +130,15 @@ class App extends Controller
       $display = $dancefloor_options['df_display_news_title'];
       return $display;
     }
+
+    public static function appbase_credentials(){
+      $dancefloor_options = get_option('dancefloor_settings');
+      return $dancefloor_options['df_api_appbase_admin_key'];
+    }
+
+    public static function appbase_64encode_key(){
+      $dancefloor_options = get_option('dancefloor_settings');
+      return $dancefloor_options['df_api_appbase_admin_64encode'];
+    }
+
 }

@@ -37,7 +37,7 @@ if ( ! function_exists('figure_post_type') ) {
       'label'                 => __( 'Figure', 'sage' ),
       'description'           => __( 'List of figures, moves, techniques for dancing afro-latin music', 'sage' ),
       'labels'                => $labels,
-      'supports'              => array( 'title', 'editor', 'thumbnail' ),
+      'supports'              => array( 'title', 'editor', 'thumbnail' , 'page-attributes', 'comments', 'revisions'),
       'taxonomies'            => array( 'category', 'post_tag', 'style', 'level' ),
       'hierarchical'          => true,
       'public'                => true,
